@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player Model")]
     [SerializeField] private Transform ikSolver;
     [SerializeField] private Transform solverParent;
+    [SerializeField] private float swordLookAtSpeed = 10;
 
     private void Update()
     {
@@ -92,7 +93,7 @@ public class PlayerController : MonoBehaviour
         lookDirection.y = 0f;
 
         Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
-        solverParent.rotation = targetRotation;// Quaternion.Lerp(solverParent.rotation, targetRotation, 100 * Time.deltaTime);
+        solverParent.rotation = Quaternion.Lerp(solverParent.rotation, targetRotation, swordLookAtSpeed * Time.deltaTime);
 
         float ikLocalZ = Mathf.Lerp(0.3f, 0.9f, DistanceToMouse());
         Vector3 ikLocalPosition = ikSolver.localPosition;

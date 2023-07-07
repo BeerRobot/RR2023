@@ -2684,10 +2684,11 @@ MonoBehaviour:
   radius: 3
   playerModel: {fileID: 1567668718}
   playerAnim: {fileID: 1567668717}
-  lookAtSpeed: 10
+  lookAtSpeed: 7.5
   followSpeed: 10
   ikSolver: {fileID: 542615138}
   solverParent: {fileID: 442494680}
+  swordLookAtSpeed: 10
 --- !u!54 &1823925983
 Rigidbody:
   m_ObjectHideFlags: 0
