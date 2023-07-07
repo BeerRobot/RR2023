@@ -11,6 +11,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 10;
     [SerializeField] private float maxVelocity = 4;
 
+    [Header("Player Model")]
+    [SerializeField] private Transform playerModel;
+    [SerializeField] private Animator playerAnim;
+    [SerializeField] private float lookAtSpeed;
+    [SerializeField] private float followSpeed;
+
     private void Update()
     {
         UpdateInput();
@@ -19,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateMovement();
+        UpdatePlayerModel();
     }
 
     private void UpdateMovement()
@@ -44,6 +51,21 @@ public class PlayerController : MonoBehaviour
             mouseWorldPosition = hit.point;
             mouseWorldPosition.y = 0.5f;
         }
+    }
+
+    private void UpdatePlayerModel()
+    {
+        Vector3 lookDirection = transform.position - playerModel.position;
+        lookDirection.y = 0f;
+
+        Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+        playerModel.rotation = Quaternion.Lerp(playerModel.rotation, targetRotation, lookAtSpeed * Time.deltaTime);
+
+        Vector3 movePosition = transform.position;
+        movePosition.y = playerModel.position.y;
+        playerModel.position = Vector3.Lerp(playerModel.position, movePosition, followSpeed * Time.deltaTime);
+
+        playerAnim.SetFloat("Move", rigidBody.velocity.magnitude);
 
     }
 
