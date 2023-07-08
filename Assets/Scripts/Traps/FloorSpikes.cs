@@ -18,6 +18,8 @@ public class FloorSpikes : MonoBehaviour
     [SerializeField] private bool isPush = false;
     [SerializeField] private bool isRetract = false;
 
+    [SerializeField] private MeshCollider trapCollider;
+
     private float speed;
     private float startTime;
     private float journeyLength;
@@ -53,6 +55,7 @@ public class FloorSpikes : MonoBehaviour
     private IEnumerator PushTrap()
     {
         yield return null;
+        trapCollider.enabled = true;
         startTime = Time.time;
         journeyLength = Vector3.Distance(startPosition, endPosition);
         speed = pushSpeed;
@@ -66,6 +69,7 @@ public class FloorSpikes : MonoBehaviour
     private IEnumerator RetractTrap()
     {
         yield return new WaitForSeconds(intervalInSeconds);
+        trapCollider.enabled = false;
         startTime = Time.time;
         journeyLength = Vector3.Distance(endPosition, startPosition);
         speed = retractSpeed;

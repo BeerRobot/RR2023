@@ -54,6 +54,7 @@ MonoBehaviour:
   endPosition: {x: 0, y: 0, z: 0}
   isPush: 0
   isRetract: 0
+  trapCollider: {fileID: 2697705542135451415}
 --- !u!1001 &2708308487388992747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,8 +123,14 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 141092, guid: bb5451e0ed4ccd14f946993edded0944,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1156738975573250879}
+      addedObject: {fileID: 3589860763442798431}
   m_SourcePrefab: {fileID: 100100000, guid: bb5451e0ed4ccd14f946993edded0944, type: 3}
+--- !u!64 &2697705542135451415 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 64727002231938044, guid: bb5451e0ed4ccd14f946993edded0944,
+    type: 3}
+  m_PrefabInstance: {fileID: 2708308487388992747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2708308487388650219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 445952, guid: bb5451e0ed4ccd14f946993edded0944,
@@ -136,7 +143,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2708308487388992747}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1156738975573250879
+--- !u!114 &3589860763442798431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
