@@ -26,14 +26,23 @@ public class PlayerController : MonoBehaviour
     private int swingCount = 0;
     [SerializeField] private float swordLookAtSpeed = 10;
 
+    public bool dead = false;
+
     private void Update()
     {
+        if (dead)
+            return;
         UpdateInput();
         UpdateIK();
     }
 
     private void FixedUpdate()
     {
+        if (dead)
+        {
+            UpdateStop();
+            return;
+        }
         UpdateMovement();
         UpdatePlayerModel();
     }
