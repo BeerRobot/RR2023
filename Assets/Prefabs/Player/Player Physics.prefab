@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8970571271726623748
 MeshFilter:
@@ -150,6 +150,9 @@ MonoBehaviour:
   speed: 100
   maxVelocity: 4
   radius: 2.5
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 64
   playerModel: {fileID: 0}
   playerAnim: {fileID: 0}
   lookAtSpeed: 5
@@ -158,3 +161,4 @@ MonoBehaviour:
   solverParent: {fileID: 0}
   solverAnim: {fileID: 0}
   swordLookAtSpeed: 10
+  dead: 0

@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 10;
     [SerializeField] private float maxVelocity = 4;
     [SerializeField] private float radius = 3;
+    [SerializeField] public LayerMask targetLayer;
 
     [Header("Player Model")]
     [SerializeField] private Transform playerModel;
@@ -76,7 +77,7 @@ public class PlayerController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, targetLayer))
         {
             mouseWorldPosition = hit.point;
             mouseWorldPosition.y = 0.5f;

@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 11731671}
   - component: {fileID: 11731670}
   - component: {fileID: 11731669}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,6 +318,10 @@ PrefabInstance:
     - target: {fileID: 149168, guid: e8b9a4d72f4c1c34b8c3ac48656dc0a3, type: 3}
       propertyPath: m_Name
       value: SM_Trap_Swing_Blade_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 149168, guid: e8b9a4d72f4c1c34b8c3ac48656dc0a3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 475890, guid: e8b9a4d72f4c1c34b8c3ac48656dc0a3, type: 3}
       propertyPath: m_RootOrder
@@ -598,6 +602,10 @@ PrefabInstance:
     - target: {fileID: 146398, guid: c6fdbb8b4c973ac47a548ec2836ef8c2, type: 3}
       propertyPath: m_Name
       value: SM_Env_Trap_Grinder_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 146398, guid: c6fdbb8b4c973ac47a548ec2836ef8c2, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 411852, guid: c6fdbb8b4c973ac47a548ec2836ef8c2, type: 3}
       propertyPath: m_RootOrder
@@ -977,7 +985,7 @@ GameObject:
   - component: {fileID: 297449806}
   - component: {fileID: 297449805}
   - component: {fileID: 297449804}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1331,7 +1339,7 @@ GameObject:
   - component: {fileID: 434304286}
   - component: {fileID: 434304285}
   - component: {fileID: 434304284}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1436,7 +1444,7 @@ GameObject:
   - component: {fileID: 538004804}
   - component: {fileID: 538004803}
   - component: {fileID: 538004802}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1541,6 +1549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Trap_Saw_Rail_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 142008, guid: 8c17f6077c063b340b9b996cf86a4952, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 492148, guid: 8c17f6077c063b340b9b996cf86a4952, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1643,7 +1655,7 @@ GameObject:
   - component: {fileID: 618787366}
   - component: {fileID: 618787365}
   - component: {fileID: 618787364}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1953,7 +1965,7 @@ GameObject:
   - component: {fileID: 656375043}
   - component: {fileID: 656375042}
   - component: {fileID: 656375041}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2088,6 +2100,10 @@ PrefabInstance:
     - target: {fileID: 142008, guid: 8c17f6077c063b340b9b996cf86a4952, type: 3}
       propertyPath: m_Name
       value: SM_Trap_Saw_Rail_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 142008, guid: 8c17f6077c063b340b9b996cf86a4952, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 492148, guid: 8c17f6077c063b340b9b996cf86a4952, type: 3}
       propertyPath: m_RootOrder
@@ -2483,6 +2499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_ReinforedPole_02
       objectReference: {fileID: 0}
+    - target: {fileID: 163244, guid: 3f5221b0a8c25dc4b95de518ead5c74e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 447618, guid: 3f5221b0a8c25dc4b95de518ead5c74e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2691,7 +2711,7 @@ GameObject:
   - component: {fileID: 781832398}
   - component: {fileID: 781832397}
   - component: {fileID: 781832396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2796,7 +2816,7 @@ GameObject:
   - component: {fileID: 799876228}
   - component: {fileID: 799876227}
   - component: {fileID: 799876226}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2950,7 +2970,7 @@ GameObject:
   - component: {fileID: 841424397}
   - component: {fileID: 841424396}
   - component: {fileID: 841424395}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3339,7 +3359,7 @@ GameObject:
   - component: {fileID: 996906363}
   - component: {fileID: 996906362}
   - component: {fileID: 996906361}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3578,7 +3598,7 @@ GameObject:
   - component: {fileID: 1073417206}
   - component: {fileID: 1073417205}
   - component: {fileID: 1073417204}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3811,6 +3831,11 @@ PrefabInstance:
       propertyPath: solverParent
       value: 
       objectReference: {fileID: 1569424478}
+    - target: {fileID: 4559817221295695439, guid: 93bd338ebe1e6e2439b2fcedb9fd17a6,
+        type: 3}
+      propertyPath: targetLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5696573742243363569, guid: 93bd338ebe1e6e2439b2fcedb9fd17a6,
         type: 3}
       propertyPath: m_RootOrder
@@ -4167,6 +4192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Trap_Saw_Rail_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 142008, guid: 8c17f6077c063b340b9b996cf86a4952, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 492148, guid: 8c17f6077c063b340b9b996cf86a4952, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4339,6 +4368,10 @@ PrefabInstance:
     - target: {fileID: 146398, guid: c6fdbb8b4c973ac47a548ec2836ef8c2, type: 3}
       propertyPath: m_Name
       value: SM_Env_Trap_Grinder_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 146398, guid: c6fdbb8b4c973ac47a548ec2836ef8c2, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 411852, guid: c6fdbb8b4c973ac47a548ec2836ef8c2, type: 3}
       propertyPath: m_RootOrder
@@ -4585,7 +4618,7 @@ GameObject:
   - component: {fileID: 1281273611}
   - component: {fileID: 1281273610}
   - component: {fileID: 1281273609}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4993,7 +5026,7 @@ GameObject:
   - component: {fileID: 1480607214}
   - component: {fileID: 1480607218}
   - component: {fileID: 1480607217}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5109,6 +5142,10 @@ PrefabInstance:
     - target: {fileID: 152086, guid: cb4d8b04723e11f4cb07532c7a1c46a7, type: 3}
       propertyPath: m_Name
       value: SM_Trap_Saw_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 152086, guid: cb4d8b04723e11f4cb07532c7a1c46a7, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 476694, guid: cb4d8b04723e11f4cb07532c7a1c46a7, type: 3}
       propertyPath: m_RootOrder
@@ -5934,7 +5971,7 @@ GameObject:
   - component: {fileID: 1663819986}
   - component: {fileID: 1663819985}
   - component: {fileID: 1663819984}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6572,6 +6609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Trap_Saw_02
       objectReference: {fileID: 0}
+    - target: {fileID: 152086, guid: cb4d8b04723e11f4cb07532c7a1c46a7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 476694, guid: cb4d8b04723e11f4cb07532c7a1c46a7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -6702,6 +6743,10 @@ PrefabInstance:
     - target: {fileID: 152086, guid: cb4d8b04723e11f4cb07532c7a1c46a7, type: 3}
       propertyPath: m_Name
       value: SM_Trap_Saw_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 152086, guid: cb4d8b04723e11f4cb07532c7a1c46a7, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 476694, guid: cb4d8b04723e11f4cb07532c7a1c46a7, type: 3}
       propertyPath: m_RootOrder
@@ -6834,7 +6879,7 @@ GameObject:
   - component: {fileID: 1961533293}
   - component: {fileID: 1961533292}
   - component: {fileID: 1961533291}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6969,6 +7014,10 @@ PrefabInstance:
     - target: {fileID: 149168, guid: e8b9a4d72f4c1c34b8c3ac48656dc0a3, type: 3}
       propertyPath: m_Name
       value: SM_Trap_Swing_Blade_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 149168, guid: e8b9a4d72f4c1c34b8c3ac48656dc0a3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 475890, guid: e8b9a4d72f4c1c34b8c3ac48656dc0a3, type: 3}
       propertyPath: m_RootOrder
