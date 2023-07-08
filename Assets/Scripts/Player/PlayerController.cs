@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     [Header("Player Model")]
     [SerializeField] private Transform ikSolver;
     [SerializeField] private Transform solverParent;
+    [SerializeField] private Animator solverAnim;
+    private int swingCount = 0;
     [SerializeField] private float swordLookAtSpeed = 10;
 
     private void Update()
@@ -55,9 +57,9 @@ public class PlayerController : MonoBehaviour
     }
 
     private void UpdateStop()
-    { 
-        if(rigidBody.velocity.magnitude > 0.1f)
-            rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, Vector3.zero, 0.75f * Time.fixedDeltaTime);
+    {
+        if (rigidBody.velocity.magnitude > 0.1f)
+            rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, Vector3.zero, 1.5f * Time.fixedDeltaTime);
     }
 
     private void UpdateInput()
@@ -70,11 +72,15 @@ public class PlayerController : MonoBehaviour
             mouseWorldPosition = hit.point;
             mouseWorldPosition.y = 0.5f;
         }
+
+        if (Input.GetMouseButtonDown(0))
+            SwingSword();
+
     }
 
     private void UpdatePlayerModel()
     {
-        Vector3 lookDirection = transform.position - playerModel.position;
+        Vector3 lookDirection = mouseWorldPosition - playerModel.position;
         lookDirection.y = 0f;
 
         Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
@@ -84,7 +90,7 @@ public class PlayerController : MonoBehaviour
         movePosition.y = playerModel.position.y;
         playerModel.position = movePosition;// Vector3.Lerp(playerModel.position, movePosition, followSpeed * Time.deltaTime);
 
-        playerAnim.SetFloat("Move", rigidBody.velocity.magnitude);
+        playerAnim.SetFloat("Move", rigidBody.velocity.magnitude/maxVelocity);
     }
 
     private void UpdateIK()
@@ -95,10 +101,24 @@ public class PlayerController : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
         solverParent.rotation = Quaternion.Lerp(solverParent.rotation, targetRotation, swordLookAtSpeed * Time.deltaTime);
 
-        float ikLocalZ = Mathf.Lerp(0.3f, 0.9f, DistanceToMouse());
+        float ikLocalZ = Mathf.Lerp(0.3f, 0.9f, DistanceToMouse() / radius);
         Vector3 ikLocalPosition = ikSolver.localPosition;
         ikLocalPosition.z = ikLocalZ;
         ikSolver.localPosition = Vector3.Lerp(ikSolver.localPosition, ikLocalPosition, 10 * Time.deltaTime);
+    }
+
+    private void SwingSword()
+    {
+        if (swingCount == 0)
+        {
+            solverAnim.Play("Swing 1");
+            swingCount++;
+        }
+        else
+        {
+            solverAnim.Play("Swing 2");
+            swingCount = 0;
+        }
     }
 
     private float DistanceToMouse()
