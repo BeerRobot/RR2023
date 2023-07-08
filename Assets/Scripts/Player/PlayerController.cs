@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
         solverParent.rotation = Quaternion.Lerp(solverParent.rotation, targetRotation, swordLookAtSpeed * Time.deltaTime);
 
-        float ikLocalZ = Mathf.Lerp(0.3f, 0.9f, DistanceToMouse() / radius);
+        float ikLocalZ = Mathf.Lerp(0.3f, 1.2f, DistanceToMouse() / radius);
         Vector3 ikLocalPosition = ikSolver.localPosition;
         ikLocalPosition.z = ikLocalZ;
         ikSolver.localPosition = Vector3.Lerp(ikSolver.localPosition, ikLocalPosition, 10 * Time.deltaTime);
@@ -109,6 +109,7 @@ public class PlayerController : MonoBehaviour
 
     private void SwingSword()
     {
+        return;//Don't like it any more
         if (swingCount == 0)
         {
             solverAnim.Play("Swing 1");
