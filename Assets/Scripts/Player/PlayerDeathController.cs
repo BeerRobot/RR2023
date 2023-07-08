@@ -65,6 +65,11 @@ public class PlayerDeathController : MonoBehaviour
     }
 
 
+    // Get Death State
+    public static bool GetDeathState()
+    {
+        return instance.playerController.dead;
+    }
 
 
     private void Update()
@@ -72,6 +77,4 @@ public class PlayerDeathController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
             Die();
     }
-
-
 }
