@@ -4,6 +4,7 @@ using UnityEngine;
 // Move object back and forth
 public class Move : MonoBehaviour
 {
+    // Private variables
     [SerializeField] private Transform startMarker;
     [SerializeField] private Transform endMarker;
 
