@@ -13,7 +13,7 @@ public class PlayerDeathController : MonoBehaviour
     [SerializeField] private FullBodyBipedIK iK;
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerController playerController;
-
+    [SerializeField] private GameObject youDied;
 
     private void Awake()
     {
@@ -34,7 +34,7 @@ public class PlayerDeathController : MonoBehaviour
             rb.isKinematic = false;
             rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
         }
-
+        instance.youDied.SetActive(true);
         instance.Respawn();
 
     }
@@ -56,6 +56,7 @@ public class PlayerDeathController : MonoBehaviour
         safeZone.y += 1;
         transform.position = safeZone;
         playerController.transform.position = safeZone;
+        youDied.SetActive(false);
     }
 
 
