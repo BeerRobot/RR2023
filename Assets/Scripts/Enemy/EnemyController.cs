@@ -31,11 +31,14 @@ public class EnemyController : MonoBehaviour
             return;
         if (hit)
             return;
-        if (Mathf.Abs(transform.position.magnitude - player.position.magnitude) > movementRange)
+
+        Vector3 difference = (player.position) - (transform.position);
+
+        if (Mathf.Abs(difference.magnitude) > movementRange)
             UpdateIdle();
-        if (Mathf.Abs(transform.position.magnitude - player.position.magnitude) < movementRange)
+        if (Mathf.Abs(difference.magnitude) < movementRange)
             UpdateMove();
-        if (Mathf.Abs(transform.position.magnitude - player.position.magnitude) < attackRange)
+        if (Mathf.Abs(difference.magnitude) < attackRange)
             UpdateAttack();
     }
 
