@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Current Force")]
     public float currentMagnitude;
+    public float angularMagnitude;
 
     public bool dead = false;
 
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         currentMagnitude = rigidBody.velocity.magnitude;
+        angularMagnitude = rigidBody.angularVelocity.magnitude;
         if (dead)
         {
             UpdateStop();

@@ -26,6 +26,8 @@ public class DoorPuzzle : MonoBehaviour
     public GameObject vCam;
     public AudioSource audio;
 
+    public bool forceOff = false;
+
 
     // Update
     private void Update()
@@ -53,6 +55,11 @@ public class DoorPuzzle : MonoBehaviour
                 doorCollider.enabled = false;
                 leftDoor.localEulerAngles = new Vector3(0, -74, 0);
                 rightDoor.localEulerAngles = new Vector3(0, 74, 0);
+                if (forceOff)
+                {
+                    rightDoor.gameObject.SetActive(false);
+                    leftDoor.gameObject.SetActive(false);
+                }
                 StartCoroutine(DoSlovePuzzle());
                 audio.Play();
             }

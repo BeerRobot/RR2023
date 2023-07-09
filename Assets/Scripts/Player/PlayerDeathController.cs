@@ -101,6 +101,12 @@ public class PlayerDeathController : MonoBehaviour
     {
         return instance.playerController.currentMagnitude;
     }
+    public static float GetAngularForce()
+    {
+        return instance.playerController.angularMagnitude;
+    }
+
+
 
     public static void PausePlayer()
     {
