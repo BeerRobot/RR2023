@@ -84,4 +84,14 @@ public class PlayerDeathController : MonoBehaviour
         return instance.playerController.currentMagnitude;
     }
 
+    public static void PausePlayer()
+    {
+        instance.playerController.Pause = true;
+    }
+
+    public static void UnpausePlayer()
+    {
+        instance.playerController.Pause = false;
+    }
+
 }

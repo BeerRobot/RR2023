@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
+    public bool Pause = false;
     private Vector3 mouseWorldPosition;
     [SerializeField] private Rigidbody rigidBody;
     [SerializeField] private float speed = 10;
@@ -54,6 +55,11 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateMovement()
     {
+        if (Pause)
+        {
+            UpdateStop();
+            return;
+        }
         if (DistanceToMouse() < radius)
         {
             UpdateStop();
