@@ -71,7 +71,7 @@ public class PlayerDeathController : MonoBehaviour
         playerController.dead = false;
         iK.enabled = true;
         animator.enabled = true;
-        safeZone.y += 1;
+        safeZone.y += 0.1f;
         transform.position = safeZone;
         playerController.transform.position = safeZone;
         youDied.SetActive(false);
