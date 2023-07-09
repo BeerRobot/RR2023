@@ -32,7 +32,23 @@ public class PlayerDeathController : MonoBehaviour
         foreach (Rigidbody rb in instance.ragDoll)
         {
             rb.isKinematic = false;
-            rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+            int roll = Random.Range(0, 4);
+            switch (roll)
+            {
+                case 0:
+                    rb.AddForce(Vector3.up * Random.Range(10,15), ForceMode.Impulse); 
+                    break;
+                case 1:
+                    rb.AddForce(Vector3.right * Random.Range(10, 15), ForceMode.Impulse);
+                    break;
+                case 2:
+                    rb.AddForce(-Vector3.right * Random.Range(10, 15), ForceMode.Impulse);
+                    break;
+                case 3:
+                    rb.AddForce(Vector3.forward * Random.Range(10, 15), ForceMode.Impulse);
+                    break;
+
+            }
         }
         instance.youDied.SetActive(true);
         instance.Respawn();
