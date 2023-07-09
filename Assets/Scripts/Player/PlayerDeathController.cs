@@ -15,7 +15,7 @@ public class PlayerDeathController : MonoBehaviour
     [SerializeField] private PlayerController playerController;
 
 
-    private void Start()
+    private void Awake()
     {
         if (!instance)
             instance = this;
@@ -77,4 +77,10 @@ public class PlayerDeathController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
             Die();
     }
+
+    public static float GetForce()
+    {
+        return instance.playerController.currentMagnitude;
+    }
+
 }

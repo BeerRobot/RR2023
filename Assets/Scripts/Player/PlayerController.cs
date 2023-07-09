@@ -27,6 +27,9 @@ public class PlayerController : MonoBehaviour
     private int swingCount = 0;
     [SerializeField] private float swordLookAtSpeed = 10;
 
+    [Header("Current Force")]
+    public float currentMagnitude;
+
     public bool dead = false;
 
     private void Update()
@@ -39,6 +42,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        currentMagnitude = rigidBody.velocity.magnitude;
         if (dead)
         {
             UpdateStop();
