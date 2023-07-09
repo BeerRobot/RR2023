@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, targetLayer))
         {
             mouseWorldPosition = hit.point;
-            mouseWorldPosition.y = 0.5f;
+            mouseWorldPosition.y = transform.position.y;
         }
 
         if (Input.GetMouseButtonDown(0))
