@@ -6,6 +6,7 @@ using UnityEngine;
 public class PressurePad : MonoBehaviour
 {
     // Private variables
+    [SerializeField] private float delayInSeconds = 2f;
     [SerializeField] private float intervalInSeconds;
     [SerializeField] private float pushSpeed;
     [SerializeField] private float retractSpeed;
@@ -48,7 +49,7 @@ public class PressurePad : MonoBehaviour
         {
             if (!PlayerDeathController.GetDeathState())
             {
-                Invoke("TriggerWall", 2f);
+                Invoke("TriggerWall", delayInSeconds);
             }
         }
     }
