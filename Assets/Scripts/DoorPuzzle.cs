@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 
@@ -21,6 +22,9 @@ public class DoorPuzzle : MonoBehaviour
     [SerializeField] private float chainMoveSpeed = 2f;
 
     private bool isOpen = false;
+
+    public GameObject vCam;
+    public AudioSource audio;
 
 
     // Update
@@ -49,7 +53,22 @@ public class DoorPuzzle : MonoBehaviour
                 doorCollider.enabled = false;
                 leftDoor.localEulerAngles = new Vector3(0, -74, 0);
                 rightDoor.localEulerAngles = new Vector3(0, 74, 0);
+                StartCoroutine(DoSlovePuzzle());
+                audio.Play();
             }
         }
     }
+
+    IEnumerator DoSlovePuzzle()
+    {
+        PlayerDeathController.PausePlayer();
+        yield return new WaitForSeconds(1.5f);
+        vCam.SetActive(true);
+        yield return new WaitForSeconds(3);
+        vCam.SetActive(false);
+        yield return new WaitForSeconds(1.5f);
+        PlayerDeathController.UnpausePlayer();
+
+    }
+
 }
