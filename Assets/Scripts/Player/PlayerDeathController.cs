@@ -14,6 +14,7 @@ public class PlayerDeathController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private GameObject youDied;
+    [SerializeField] private AudioSource deathAudio;
 
     private void Awake()
     {
@@ -50,6 +51,7 @@ public class PlayerDeathController : MonoBehaviour
 
             }
         }
+        instance.deathAudio.Play();
         instance.youDied.SetActive(true);
         instance.Respawn();
 
