@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 
@@ -19,6 +20,8 @@ public class DoorPuzzle : MonoBehaviour
 
     [SerializeField] private GameObject chain;
     [SerializeField] private float chainMoveSpeed = 2f;
+
+    [SerializeField] private GameObject vCam;
 
     private bool isOpen = false;
 
@@ -49,7 +52,20 @@ public class DoorPuzzle : MonoBehaviour
                 doorCollider.enabled = false;
                 leftDoor.localEulerAngles = new Vector3(0, -74, 0);
                 rightDoor.localEulerAngles = new Vector3(0, 74, 0);
+                StartCoroutine(ShowPuzzle());
             }
         }
+    }
+
+    IEnumerator ShowPuzzle()
+    {
+        PlayerDeathController.PausePlayer();
+        yield return new WaitForSeconds(1.5f);
+        vCam.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        vCam.SetActive(false);
+        yield return new WaitForSeconds(1.5f);
+        PlayerDeathController.UnpausePlayer();
+        vCam.SetActive(false);
     }
 }
